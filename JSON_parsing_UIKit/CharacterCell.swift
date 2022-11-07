@@ -17,9 +17,9 @@ class CharacterCell: UITableViewCell {
     
     func configure(with character: Character) {
         nameCharacter.text = character.name
-        statusCharacter.text = character.status
-        speciesCharacter.text = character.species
-        genderCharacter.text = character.gender
+        statusCharacter.text = "Status: \(character.status)"
+        speciesCharacter.text = "Species: \(character.species)"
+        genderCharacter.text = "Gender: \(character.gender)"
 
         DispatchQueue.global().async {
             guard let imageUrl = URL(string: character.image) else { return }

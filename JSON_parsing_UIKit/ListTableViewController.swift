@@ -17,6 +17,7 @@ class ListTableViewController: UITableViewController {
         super.viewDidLoad()
 
         fetchData()
+
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,6 +32,11 @@ class ListTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+         return 120
+     }
+
     
     func fetchData(){
         guard let url = URL(string: jsonUrlList) else { return }
