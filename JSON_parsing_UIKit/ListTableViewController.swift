@@ -17,7 +17,6 @@ class ListTableViewController: UITableViewController {
         super.viewDidLoad()
 
         fetchData()
-
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,9 +53,8 @@ class ListTableViewController: UITableViewController {
             guard let data = data else { return }
             
             do {
-                let websiteDescription = try JSONDecoder().decode(CharactersList.self, from: data)
-                self.characters = websiteDescription.results
-                print(self.characters)
+                let json = try JSONDecoder().decode(CharactersList.self, from: data)
+                self.characters = json.results
             } catch let error {
                 print(error)
             }

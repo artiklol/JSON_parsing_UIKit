@@ -17,7 +17,6 @@ class MainViewController: UIViewController {
         setupButtonStyle(button: letsGoButton)
     }
     
-    
     func setupButtonStyle(button : UIButton){
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.clipsToBounds = true
