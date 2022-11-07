@@ -16,15 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm1-n9-817">
-                                <rect key="frame" x="95" y="387" width="200" height="70"/>
-                                <color key="backgroundColor" red="1" green="0.59335874550000001" blue="0.89750047160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rick_and_Morty_logo" translatesAutoresizingMaskIntoConstraints="NO" id="CeZ-G7-bSD">
+                                <rect key="frame" x="20" y="150" width="350" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Rrp-mE-ZNb"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Toc-I1-1kd"/>
+                                    <constraint firstAttribute="height" constant="100" id="WLG-Cw-gSK"/>
                                 </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingsglass-green-portaltitle-kingsglass-green-rick-and-morty-portal-spiral-balloon-food-transparent-png-691030" translatesAutoresizingMaskIntoConstraints="NO" id="OaY-Pt-cI6">
+                                <rect key="frame" x="30" y="391" width="330" height="349"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm1-n9-817">
+                                <rect key="frame" x="107" y="477" width="177" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="xOU-YR-l0r"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Let's GO!!">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="29"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="tFT-Jj-pyV" kind="show" id="UOP-kK-lnX"/>
                                 </connections>
@@ -33,11 +43,22 @@
                         <viewLayoutGuide key="safeArea" id="rYo-yS-PFb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cm1-n9-817" firstAttribute="centerY" secondItem="tdQ-Ju-45j" secondAttribute="centerY" id="thq-a7-z0B"/>
-                            <constraint firstItem="cm1-n9-817" firstAttribute="centerX" secondItem="tdQ-Ju-45j" secondAttribute="centerX" id="wIP-3D-drF"/>
+                            <constraint firstItem="rYo-yS-PFb" firstAttribute="trailing" secondItem="CeZ-G7-bSD" secondAttribute="trailing" constant="20" id="2d6-Yn-qrA"/>
+                            <constraint firstItem="CeZ-G7-bSD" firstAttribute="top" secondItem="tdQ-Ju-45j" secondAttribute="top" constant="150" id="4qP-EE-gLH"/>
+                            <constraint firstItem="rYo-yS-PFb" firstAttribute="trailing" secondItem="cm1-n9-817" secondAttribute="trailing" constant="106" id="9nj-Ni-Fsn"/>
+                            <constraint firstItem="OaY-Pt-cI6" firstAttribute="leading" secondItem="rYo-yS-PFb" secondAttribute="leading" constant="30" id="RVu-F6-6xb"/>
+                            <constraint firstItem="rYo-yS-PFb" firstAttribute="trailing" secondItem="OaY-Pt-cI6" secondAttribute="trailing" constant="30" id="YDq-uQ-Bt9"/>
+                            <constraint firstItem="cm1-n9-817" firstAttribute="leading" secondItem="rYo-yS-PFb" secondAttribute="leading" constant="107" id="YQb-u7-Ztd"/>
+                            <constraint firstItem="rYo-yS-PFb" firstAttribute="bottom" secondItem="OaY-Pt-cI6" secondAttribute="bottom" constant="70" id="baM-ex-JDD"/>
+                            <constraint firstItem="CeZ-G7-bSD" firstAttribute="leading" secondItem="rYo-yS-PFb" secondAttribute="leading" constant="20" id="dZy-r0-TYo"/>
+                            <constraint firstItem="cm1-n9-817" firstAttribute="top" secondItem="CeZ-G7-bSD" secondAttribute="bottom" constant="227" id="dz7-we-gtb"/>
+                            <constraint firstItem="OaY-Pt-cI6" firstAttribute="top" secondItem="CeZ-G7-bSD" secondAttribute="bottom" constant="141" id="xuH-9A-E9d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LWG-GG-DXW"/>
+                    <connections>
+                        <outlet property="letsGoButton" destination="cm1-n9-817" id="AlD-bJ-WEl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXx-aH-UCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,6 +174,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Rick_and_Morty_logo" width="3125" height="955"/>
+        <image name="kingsglass-green-portaltitle-kingsglass-green-rick-and-morty-portal-spiral-balloon-food-transparent-png-691030" width="769" height="777"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
