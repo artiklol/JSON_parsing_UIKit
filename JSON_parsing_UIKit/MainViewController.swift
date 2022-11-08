@@ -11,15 +11,17 @@ class MainViewController: UIViewController {
     
     @IBOutlet var letsGoButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let listTVC = segue.destination as! ListTableViewController
         
-        setupButtonStyle(button: letsGoButton)
-    }
-    
-    func setupButtonStyle(button : UIButton){
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
+        switch segue.identifier {
+        case "urlsession":
+            listTVC.fetchData()
+        case "alamofire":
+            listTVC.fetchDataAlamofire()
+        default:
+            break
+        }
     }
     
 }

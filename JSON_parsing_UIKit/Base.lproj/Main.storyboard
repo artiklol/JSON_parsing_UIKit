@@ -31,18 +31,31 @@
                                 <color key="textColor" red="0.0" green="0.57647058819999997" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm1-n9-817">
-                                <rect key="frame" x="30" y="400" width="330" height="330"/>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm1-n9-817">
+                                <rect key="frame" x="91" y="588" width="209" height="49"/>
+                                <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="330" id="xOU-YR-l0r"/>
+                                    <constraint firstAttribute="height" constant="49" id="xOU-YR-l0r"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Let's GO!!">
-                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="29"/>
+                                <buttonConfiguration key="configuration" style="plain" title="URLsession">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="29"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="tFT-Jj-pyV" kind="show" id="UOP-kK-lnX"/>
+                                    <segue destination="tFT-Jj-pyV" kind="show" identifier="urlsession" id="UOP-kK-lnX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdf-ST-v02">
+                                <rect key="frame" x="91" y="500" width="209" height="49"/>
+                                <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alamofire">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="29"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tFT-Jj-pyV" kind="show" identifier="alamofire" id="r4j-ln-hY9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,15 +65,18 @@
                             <constraint firstItem="rYo-yS-PFb" firstAttribute="trailing" secondItem="CeZ-G7-bSD" secondAttribute="trailing" constant="20" id="2d6-Yn-qrA"/>
                             <constraint firstItem="CeZ-G7-bSD" firstAttribute="top" secondItem="tdQ-Ju-45j" secondAttribute="top" constant="150" id="4qP-EE-gLH"/>
                             <constraint firstItem="m2j-u0-SL8" firstAttribute="top" secondItem="OaY-Pt-cI6" secondAttribute="bottom" constant="27" id="9Ka-F4-UvF"/>
-                            <constraint firstItem="rYo-yS-PFb" firstAttribute="trailing" secondItem="cm1-n9-817" secondAttribute="trailing" constant="30" id="9nj-Ni-Fsn"/>
+                            <constraint firstItem="rYo-yS-PFb" firstAttribute="trailing" secondItem="cm1-n9-817" secondAttribute="trailing" constant="90" id="9nj-Ni-Fsn"/>
+                            <constraint firstItem="cdf-ST-v02" firstAttribute="top" secondItem="CeZ-G7-bSD" secondAttribute="bottom" constant="250" id="JXf-tf-rQ1"/>
                             <constraint firstItem="rYo-yS-PFb" firstAttribute="trailing" secondItem="m2j-u0-SL8" secondAttribute="trailing" constant="112" id="Kln-s3-CPp"/>
+                            <constraint firstItem="rYo-yS-PFb" firstAttribute="trailing" secondItem="cdf-ST-v02" secondAttribute="trailing" constant="90" id="Nz8-a5-rgX"/>
                             <constraint firstItem="OaY-Pt-cI6" firstAttribute="leading" secondItem="rYo-yS-PFb" secondAttribute="leading" constant="30" id="RVu-F6-6xb"/>
                             <constraint firstItem="rYo-yS-PFb" firstAttribute="trailing" secondItem="OaY-Pt-cI6" secondAttribute="trailing" constant="30" id="YDq-uQ-Bt9"/>
-                            <constraint firstItem="cm1-n9-817" firstAttribute="leading" secondItem="rYo-yS-PFb" secondAttribute="leading" constant="30" id="YQb-u7-Ztd"/>
+                            <constraint firstItem="cm1-n9-817" firstAttribute="leading" secondItem="rYo-yS-PFb" secondAttribute="leading" constant="91" id="YQb-u7-Ztd"/>
                             <constraint firstItem="rYo-yS-PFb" firstAttribute="bottom" secondItem="m2j-u0-SL8" secondAttribute="bottom" constant="20" id="aWt-y8-tM3"/>
                             <constraint firstItem="rYo-yS-PFb" firstAttribute="bottom" secondItem="OaY-Pt-cI6" secondAttribute="bottom" constant="70" id="baM-ex-JDD"/>
                             <constraint firstItem="CeZ-G7-bSD" firstAttribute="leading" secondItem="rYo-yS-PFb" secondAttribute="leading" constant="20" id="dZy-r0-TYo"/>
-                            <constraint firstItem="cm1-n9-817" firstAttribute="top" secondItem="CeZ-G7-bSD" secondAttribute="bottom" constant="150" id="dz7-we-gtb"/>
+                            <constraint firstItem="cm1-n9-817" firstAttribute="top" secondItem="CeZ-G7-bSD" secondAttribute="bottom" constant="338" id="dz7-we-gtb"/>
+                            <constraint firstItem="cdf-ST-v02" firstAttribute="leading" secondItem="rYo-yS-PFb" secondAttribute="leading" constant="91" id="v5g-wt-hqn"/>
                             <constraint firstItem="m2j-u0-SL8" firstAttribute="leading" secondItem="rYo-yS-PFb" secondAttribute="leading" constant="112" id="xif-vc-4WK"/>
                             <constraint firstItem="OaY-Pt-cI6" firstAttribute="top" secondItem="CeZ-G7-bSD" secondAttribute="bottom" constant="141" id="xuH-9A-E9d"/>
                         </constraints>
@@ -183,6 +199,9 @@
             <point key="canvasLocation" x="860" y="-61.137440758293835"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="r4j-ln-hY9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Rick_and_Morty_logo" width="3125" height="955"/>
         <image name="kingsglass-green-portaltitle-kingsglass-green-rick-and-morty-portal-spiral-balloon-food-transparent-png-691030" width="769" height="777"/>

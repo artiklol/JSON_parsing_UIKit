@@ -16,13 +16,13 @@ class CharacterCell: UITableViewCell {
     @IBOutlet var imageCharacter: UIImageView!
     
     func configure(with character: Character) {
-        nameCharacter.text = character.name
-        statusCharacter.text = "Status: \(character.status)"
-        speciesCharacter.text = "Species: \(character.species)"
-        genderCharacter.text = "Gender: \(character.gender)"
+        nameCharacter.text = character.name ?? "Error"
+        statusCharacter.text = "Status: \(character.status ?? "Error")"
+        speciesCharacter.text = "Species: \(character.species ?? "Error")"
+        genderCharacter.text = "Gender: \(character.gender ?? "Error")"
 
         DispatchQueue.global().async {
-            guard let imageUrl = URL(string: character.image) else { return }
+            guard let imageUrl = URL(string: character.image ?? "") else { return }
             guard let imageData = try? Data(contentsOf: imageUrl) else { return }
 
             DispatchQueue.main.async {
