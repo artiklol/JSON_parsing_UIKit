@@ -90,14 +90,16 @@
             </objects>
             <point key="canvasLocation" x="1789.2307692307693" y="-61.137440758293835"/>
         </scene>
-        <!--List Table View Controller-->
+        <!--List characters-->
         <scene sceneID="oOd-z7-e1Z">
             <objects>
                 <tableViewController id="tFT-Jj-pyV" customClass="ListTableViewController" customModule="JSON_parsing_UIKit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="71C-bz-CAm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="71C-bz-CAm">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" red="0.0" green="0.57647058819999997" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="A5I-QJ-nAX" customClass="CharacterCell" customModule="JSON_parsing_UIKit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="390" height="150"/>
@@ -169,12 +171,13 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="tFT-Jj-pyV" id="nWE-FN-772"/>
                             <outlet property="delegate" destination="tFT-Jj-pyV" id="I6X-QD-u1o"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bTU-8A-TkW"/>
+                    <navigationItem key="navigationItem" title="List characters" id="bTU-8A-TkW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOm-Al-dvl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,9 +188,17 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ooB-Az-XvA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pop-A0-cRQ">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                    <navigationBar key="navigationBar" alpha="0.75" contentMode="scaleToFill" largeTitles="YES" id="Pop-A0-cRQ">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.57647058819999997" blue="0.28235294119999998" alpha="0.8980392157" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                            <color key="textColor" red="0.0" green="0.57647058819999997" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.57647058819999997" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

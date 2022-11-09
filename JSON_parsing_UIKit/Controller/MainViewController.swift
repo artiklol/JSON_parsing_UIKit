@@ -16,9 +16,15 @@ class MainViewController: UIViewController {
         
         switch segue.identifier {
         case "urlsession":
-            listTVC.fetchData()
+            NetworkManager.fetchData { characters in
+                listTVC.characters = characters
+                listTVC.tableView.reloadData()
+            }
         case "alamofire":
-            listTVC.fetchDataAlamofire()
+            NetworkManager.fetchDataAlamofire{ characters in
+                listTVC.characters = characters
+                listTVC.tableView.reloadData()
+            }
         default:
             break
         }

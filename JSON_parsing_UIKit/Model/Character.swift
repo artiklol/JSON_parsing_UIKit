@@ -6,7 +6,7 @@
 //
 
 struct CharactersList: Decodable{
-    let results: [Character]
+    let results: [Character]?
 }
 
 struct Character: Decodable {
